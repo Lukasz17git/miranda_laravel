@@ -28,8 +28,6 @@ use Illuminate\Support\Facades\Route;
 //where exactly is the model, view and controller? (since its MVC)
 //can you show us a small react app that uses MVC architecture in front end?
 //exactly for what did we use docker? i did the steps and didnt have any errors so i honestly dont know if it was needed or not and for what
-//do developers seed DBs frecuently? because honestly i think its pointless if you are developing the app, i would say its around one of the latests steps, because you may iterate a lot of times your "schemas/models" while developing the app
-//whats the difference between what yo do and migrations?
 //why there is a contact model?
 
 
