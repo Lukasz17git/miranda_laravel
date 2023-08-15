@@ -48,6 +48,7 @@
     <!-- Form -->
     <section class="contact-form">
         <form onsubmit="submitForm(event)" method="POST">
+            @csrf
             <div class=" contact-form-top">
                 <div class="contact-form-input-wrapper">
                     <img src="/Icons/name.svg" />
@@ -80,7 +81,7 @@
     <script>
         const submitForm = async (e) => {
             e.preventDefault()
-            const res = await fetch('/contact_form', {
+            const res = await fetch('/contact', {
                 method: 'POST',
                 body: new FormData(e.target)
             })

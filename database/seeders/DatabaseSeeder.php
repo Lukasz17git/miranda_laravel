@@ -12,6 +12,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-      \DB::unprepared(file_get_contents('./seed.sql'));
+      \DB::unprepared(file_get_contents('./db.sql'));
     }
 }
