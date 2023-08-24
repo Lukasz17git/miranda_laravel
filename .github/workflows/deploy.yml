@@ -1,0 +1,21 @@
+name: Deploy
+
+on:
+   workflow_dispatch:
+   push:
+      branches:
+         - "main"
+
+jobs:
+  ssh_and_git_pull:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Connect to EC2 instance and Git Pull
+        run: |
+          ssh -i ${{ secrets.SSH_PUBLIC_KEY }} ubuntu@ec2-15-188-52-131.eu-west-3.compute.amazonaws.com "cd /var/www && git pull"
+
+env:
+  SSH_PRIVATE_KEY: ${{ secrets.SSH_PUBLIC_KEY }}
