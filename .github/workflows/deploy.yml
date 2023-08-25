@@ -19,4 +19,8 @@ jobs:
          host: ec2-15-188-52-131.eu-west-3.compute.amazonaws.com
          username: ubuntu
          key: ${{ secrets.SSH_PUBLIC_KEY }}
-         script: whoami
+         script: |
+            cd /var/www/
+            ls
+            git pull
+            ls
