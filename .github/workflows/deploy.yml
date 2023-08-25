@@ -22,6 +22,5 @@ jobs:
          script: |
             cd /var/www/miranda_laravel
             sudo git pull
-            composer install
             sudo chown -R www-data:www-data /var/www/miranda_laravel
             systemctl restart apache2
